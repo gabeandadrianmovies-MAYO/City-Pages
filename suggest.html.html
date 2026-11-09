@@ -1,74 +1,180 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BOYDS is an independent community guide to Boyds, Maryland: local places, history, community resources, events, and news.">
-  <title>Suggest Something | Boyds, Maryland</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Share a Suggestion | City Pages</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="announcement">
+
+<div class="announcement">
     <span class="announcement-dot"></span>
-    An independent community guide to Boyds, Maryland
-    <a href="about.html.html">Learn about BOYDS <span aria-hidden="true">↗</span></a>
+    An independent community guide to Your Town!🫵
+    <a href="about.html.html">Learn about City Pages <span aria-hidden="true">↗</span></a>
   </div>
 
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="BOYDS home">
-      <span class="brand-mark">B<span>.</span></span>
-      <span class="brand-word">BOYDS<small>MARYLAND · COMMUNITY GUIDE</small></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation">☰</button>
-       <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
-      <a href="explore.html.html">Explore</a>
-      <a href="history.html.html">History</a>
-      <a href="what-to-know.html.html">What To Know</a>
-      <a href="about.html.html">About</a>
-      <a href="home.html.html">Home</a>
- </nav>
-    <a class="header-cta" href="suggest.html.html">Share something <span aria-hidden="true">↗</span></a>
-  </header>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">CP<span>.</span></span>
+    <span class="brand-word">
+      City Pages
+      <small>LOCAL · COMMUNITY GUIDES</small>
+    </span>
+  </a>
 
+  <button class="menu-toggle" id="menuToggle"
+    aria-expanded="false" aria-controls="primaryNav"
+    aria-label="Open navigation">☰</button>
+
+  <nav class="primary-nav" id="primaryNav">
+    <a href="index.html">Home</a>
+    <a href="about.html.html">About</a>
+    <a href="suggest.html.html" aria-current="page">Suggest</a>
+    <a href="your-city.html.html">Make Your City Today!</a>
+    <a href="library.html.html">City Library</a>
+ </nav>
+
+  <a class="header-cta" href="suggest.html.html">Share something <span aria-hidden="true">↗</span></a>
+</header>
 
 <main>
-  <!-- BOYDS SUGGESTION REDIRECT -->
-  <section class="upgrade-section suggestion-section" id="suggest">
+  <section class="section wrap">
     <div class="section-heading">
-      <span class="eyebrow">YOUR COMMUNITY, YOUR IDEAS</span>
-      <h1>Have a Suggestion?</h1>
+      <div>
+        <div class="eyebrow">
+          <span></span> HELP IMPROVE CITY PAGES
+        </div>
+        <h1>Share a <em>Suggestion.</em></h1>
+      </div>
       <p>
-        Know a great local place, have a correction,
-        or want to suggest something for BOYDS?
-      </p>
-      <p>
-        We're now collecting community suggestions
-        through City Pages!
+        Know a place worth featuring? Found something
+        we should correct? Have an idea to make
+        City Pages better? We'd love to hear it.
       </p>
     </div>
 
-    <div class="suggestion-form">
-      <h2>Share Your Idea</h2>
-      <p>
-        Visit our City Pages suggestion form to
-        recommend places, share stories, report
-        corrections, or suggest improvements.
-      </p>
+    <div class="community-grid">
+      <article class="community-card">
+        <div class="card-kicker">01 / DISCOVER</div>
+        <h2>Suggest a Place</h2>
+        <p>
+          Recommend a park, landmark, business,
+          or other community resource.
+        </p>
+      </article>
 
-      <a class="green-button"
-         href="CITY-PAGES-URL/suggest.html.html">
-        Share a Suggestion ↗
-      </a>
+      <article class="community-card">
+        <div class="card-kicker">02 / IMPROVE</div>
+        <h2>Report a Correction</h2>
+        <p>
+          Help us keep our community information
+          useful and accurate.
+        </p>
+      </article>
+
+      <article class="community-card">
+        <div class="card-kicker">03 / CREATE</div>
+        <h2>Share an Idea</h2>
+        <p>
+          Suggest a new feature, story,
+          or improvement for City Pages.
+        </p>
+      </article>
     </div>
   </section>
+
+  <section class="section wrap">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">
+          <span></span> SEND YOUR IDEA
+        </div>
+        <h2>Tell us about it.</h2>
+      </div>
+      <p>
+        Complete the form below. Please don't
+        include private or sensitive information.
+      </p>
+    </div>
+
+    <form class="suggestion-form"
+          action="https://formsubmit.co/gabeandadrianmovies@gmail.com"
+          method="POST">
+
+      <input type="hidden" name="_subject"
+             value="New City Pages Suggestion">
+      <input type="hidden" name="_captcha" value="true">
+
+      <label for="suggestionType">Suggestion Type</label>
+      <select id="suggestionType" name="type" required>
+        <option value="">Choose a category...</option>
+        <option value="Place">Suggest a place</option>
+        <option value="Correction">Report a correction</option>
+        <option value="Story">Suggest a story</option>
+        <option value="Feature">Website improvement</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="suggestionTitle">Suggestion Title</label>
+      <input id="suggestionTitle"
+             name="title"
+             type="text"
+             placeholder="Give your suggestion a title"
+             required>
+
+      <label for="suggestionTown">Town or City (optional)</label>
+      <input id="suggestionTown"
+             name="town"
+             type="text"
+             placeholder="Example: Boyds, Maryland">
+
+      <label for="suggestionDetails">Details</label>
+      <textarea id="suggestionDetails"
+                name="details"
+                rows="6"
+                placeholder="Tell us more about your idea..."
+                required></textarea>
+
+      <button class="green-button" type="submit">
+        Send Suggestion ↗
+      </button>
+
+      <p>
+        Suggestions are reviewed before anything
+        is added to City Pages.
+      </p>
+    </form>
+  </section>
+
+  <section class="section wrap">
+    <h2>Want an entire town website?</h2>
+    <p>
+      Have a town or city you'd like to see
+      in the City Library?
+    </p>
+    <a class="green-button" href="your-city.html.html">
+      Make Your City Today! ↗
+    </a>
+  </section>
 </main>
-  <footer class="site-footer">
-    <div class="wrap footer-main"><a class="brand footer-brand" href="#home"><span class="brand-mark">B<span>.</span></span><span class="brand-word">BOYDS<small>MARYLAND · COMMUNITY GUIDE</small></span></a><p>A small town. A shared story.</p><a href="#suggest" class="back-top">Back to top ↑</a></div>
-    <div class="wrap footer-bottom"><span>© <span id="year"></span> BOYDS — Independent community project</span><span>Not an official government website.</span></div>
-  </footer>
-  <script src="script.js"></script>
+
+<footer class="site-footer">
+  <div class="wrap footer-main">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">CP<span>.</span></span>
+      <span class="brand-word">
+        City Pages
+        <small>LOCAL · COMMUNITY GUIDES</small>
+      </span>
+    </a>
+    <p>Your town. Your story.</p>
+    <a class="back-top" href="#">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
+</html>
 </html>

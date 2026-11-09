@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a community website from City Pages.">
+  <title>Make Your City Today! | City Pages</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    An independent community guide to Your Town!🫵
+    <a href="about.html.html">Learn about City Pages <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="City Pages home">
+      <span class="brand-mark">CP<span>.</span></span>
+      <span class="brand-word">City Pages<small>LOCAL · COMMUNITY GUIDES</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle"
+      aria-expanded="false" aria-controls="primaryNav"
+      aria-label="Open navigation">☰</button>
+
+    <nav class="primary-nav" id="primaryNav">
+      <a href="index.html">Home</a>
+      <a href="about.html.html">About</a>
+      <a href="suggest.html.html">Suggest</a>
+      <a href="your-city.html.html">Make Your City Today!</a>
+      <a href="library.html.html">The City Library</a>
+   </nav>
+    <a class="header-cta" href="suggest.html.html">Share something <span aria-hidden="true">↗</span></a>
+  </header>
+
+
+
+  <main class="section wrap">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">
+          <span></span> YOUR COMMUNITY, YOUR STORY
+        </div>
+        <h1>Make Your <em>City Today!</em></h1>
+      </div>
+    </div>
+
+    <p><strong>Your town. Your story.</strong></p>
+
+    <p>
+      Want your town to have its very own website?
+      City Pages helps communities share their
+      history, local places, events, and stories.
+      Request your community's website today!
+    </p>
+
+    <section class="section wrap">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">
+            <span></span> GET STARTED
+          </div>
+          <h2>Request Your <em>Town!</em></h2>
+        </div>
+      </div>
+
+      <form id="cityRequestForm"
+            class="suggestion-form"
+            action="https://formsubmit.co/gabeandadrianmovies@gmail.com"
+            method="POST">
+
+        <input type="hidden" name="_subject"
+               value="New City Pages Town Request!">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+
+        <label for="cityName">Town or City Name</label>
+        <input id="cityName" name="cityName" type="text"
+               placeholder="e.g. Boyds" required>
+
+        <label for="stateName">State</label>
+        <input id="stateName" name="stateName" type="text"
+               placeholder="e.g. Maryland" required>
+
+        <label for="cityReason">
+          Why should we feature your city?
+        </label>
+        <textarea id="cityReason" name="cityReason"
+                  rows="5" required
+                  placeholder="Tell us what makes your community special!"></textarea>
+
+        <p class="form-privacy">
+          Please don't include private information,
+          home addresses, or sensitive personal details.
+        </p>
+
+        <p class="form-privacy">
+          Requests are reviewed manually. Submitting
+          a request does not guarantee a website
+          will be created.
+        </p>
+
+        <button type="submit" class="green-button">
+          Request My City ↗
+        </button>
+      </form>
+    </section>
+  </main>
+
+ <footer class="site-footer">
+    <div class="wrap footer-main"><a class="brand footer-brand" href="#home"><span class="brand-mark">CP<span>.</span></span><span class="brand-word">City Pages<small>LOCAL · COMMUNITY GUIDES</small></span></a><p>Your town. Your story.</p><a href="#" class="back-top"></a></div>
+    <div class="wrap footer-bottom"><span>© <span id="year"></span> City Pages — Independent community project</span><span>Not an official government website.</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

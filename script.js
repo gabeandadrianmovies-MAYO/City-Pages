@@ -18,7 +18,13 @@
     });
   });
 
-  document.getElementById('year').textContent = new Date().getFullYear();
+  
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
 
   // Event filtering: all entries point visitors to organizers for confirmed details.
   const eventSearch = document.getElementById('eventSearch');
@@ -93,7 +99,6 @@ if (typeof form !== "undefined" && form) {
 })();
 
 // ===== BOYDS BUSINESS DIRECTORY FILTER ===== (() => { const search = document.getElementById("businessSearch"); const list = document.getElementById("businessList"); const emptyMessage = document.getElementById("businessEmpty"); const filterButtons = document.querySelectorAll(".boyds-filter"); // If the directory isn't on this page, safely stop. if (!search || !list || !emptyMessage) return; let activeCategory = "all"; function filterBusinesses() { const query = search.value.trim().toLowerCase(); const cards = list.querySelectorAll(".boyds-card"); let visibleCount = 0; cards.forEach((card) => { const category = card.dataset.category || ""; const text = card.textContent.toLowerCase(); const matchesCategory = activeCategory === "all" || category === activeCategory; const matchesSearch = text.includes(query); const show = matchesCategory && matchesSearch; card.hidden = !show; if (show) visibleCount++; }); emptyMessage.hidden = visibleCount !== 0; } search.addEventListener("input", filterBusinesses); filterButtons.forEach((button) => { button.addEventListener("click", () => { activeCategory = button.dataset.category || "all"; filterButtons.forEach((item) => { const selected = item === button; item.classList.toggle("active", selected); item.setAttribute("aria-pressed", String(selected)); }); filterBusinesses(); }); button.setAttribute( "aria-pressed", String(button.classList.contains("active")) ); }); filterBusinesses(); })();
-/*
 /* BOYDS DIRECTORY SEARCH AND FILTERS */
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("directorySearch");
@@ -370,3 +375,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // FormSubmit will handle sending the email.
   });
 });
+
+
+/* CITY LIBRARY SEARCH */
+
+const citySearch = document.getElementById("citySearch");
+const noCities = document.getElementById("noCities");
+
+if (citySearch) {
+  citySearch.addEventListener("input", function () {
+    const search = citySearch.value.toLowerCase().trim();
+    const cities = document.querySelectorAll(".city-card");
+    let visibleCount = 0;
+
+    cities.forEach(function (city) {
+      const cityName = city.dataset.search.toLowerCase();
+      const matches = cityName.includes(search);
+
+      city.hidden = !matches;
+
+      if (matches) {
+        visibleCount++;
+      }
+    });
+
+    if (noCities) {
+      noCities.hidden = visibleCount !== 0;
+    }
+  });
+}
+
